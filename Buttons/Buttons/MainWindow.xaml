@@ -1,0 +1,38 @@
+﻿<Window x:Class="ColorButtonsDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Цветные кнопки"
+        Height="450" Width="800"
+        SizeChanged="Window_SizeChanged">
+    <Grid>
+        <Border x:Name="ButtonsContainer"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                BorderThickness="1"
+                Padding="10"
+                Margin="5">
+
+            <WrapPanel x:Name="ColorButtonsPanel"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Top">
+                        <Button Content="Navy" Margin="2" Padding="8,6"/>
+                        <Button Content="Blue" Margin="2" Padding="8,6"/>
+                        <Button Content="Aqua" Margin="2" Padding="8,6"/>
+                        <Button Content="Teal" Margin="2" Padding="8,6"/>
+                        <Button Content="Olive" Margin="2" Padding="8,6"/>
+                        <Button Content="Green" Margin="2" Padding="8,6"/>
+                        <Button Content="Lime" Margin="2" Padding="8,6"/>
+                        <Button Content="Yellow" Margin="2" Padding="8,6"/>
+                        <Button Content="Orange" Margin="2" Padding="8,6"/>
+                        <Button Content="Red" Margin="2" Padding="8,6"/>
+                        <Button Content="Maroon" Margin="2" Padding="8,6"/>
+                        <Button Content="Fuchsia" Margin="2" Padding="8,6"/>
+                        <Button Content="Purple" Margin="2" Padding="8,6"/>
+                        <Button Content="Black" Margin="2" Padding="8,6"/>
+                        <Button Content="Silver" Margin="2" Padding="8,6"/>
+                        <Button Content="Gray" Margin="2" Padding="8,6"/>
+                        <Button Content="White" Margin="2" Padding="8,6"/>
+            </WrapPanel>
+        </Border>
+    </Grid>
+</Window>
