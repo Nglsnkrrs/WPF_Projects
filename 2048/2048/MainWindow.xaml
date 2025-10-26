@@ -1,0 +1,32 @@
+﻿<Window x:Class="Game2048.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="2048" Height="500" Width="400"
+        KeyDown="Window_KeyDown"
+        WindowStartupLocation="CenterScreen"
+        Background="#faf8ef">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок и кнопки -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
+            <TextBlock Text="2048" FontSize="36" FontWeight="Bold" Margin="0,0,20,0"/>
+            <Button Content="Новая игра" Click="NewGame_Click" Padding="10,5"/>
+        </StackPanel>
+
+        <!-- Игровое поле -->
+        <UniformGrid x:Name="GameGrid" Grid.Row="1" Rows="4" Columns="4" Background="#bbada0" Margin="5" />
+
+        <!-- Управление -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+            <Button Content="←" Click="Left_Click" Padding="10,5" Margin="5"/>
+            <Button Content="↑" Click="Up_Click" Padding="10,5" Margin="5"/>
+            <Button Content="↓" Click="Down_Click" Padding="10,5" Margin="5"/>
+            <Button Content="→" Click="Right_Click" Padding="10,5" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>
