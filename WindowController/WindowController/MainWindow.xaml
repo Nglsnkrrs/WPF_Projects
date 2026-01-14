@@ -1,0 +1,26 @@
+﻿<Window x:Class="WindowController.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowController"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Введите заголовок окна, которое хотите найти:" Margin="0,0,0,5"/>
+            <TextBox Name="txtTargetTitle" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Выберите действие:" Margin="0,0,0,5"/>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <RadioButton Name="rbChangeTitle" Content="Изменить заголовок" IsChecked="True" Margin="0,0,10,0"/>
+                <RadioButton Name="rbCloseWindow" Content="Закрыть окно"/>
+            </StackPanel>
+
+            <TextBlock Text="Новый заголовок (если изменяем):" Margin="0,0,0,5"/>
+            <TextBox Name="txtNewTitle" Margin="0,0,0,10"/>
+
+            <Button Content="Выполнить" Width="100" Click="BtnExecute_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
