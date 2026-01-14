@@ -1,0 +1,20 @@
+﻿<Window x:Class="BeepApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BeepApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Интервал между сигналами (мс):" Margin="0,0,0,5"/>
+            <TextBox Name="txtInterval" Text="500" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Количество сигналов:" Margin="0,0,0,5"/>
+            <TextBox Name="txtCount" Text="5" Margin="0,0,0,10"/>
+
+            <Button Content="Запустить сигналы" Width="150" Click="BtnStart_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
