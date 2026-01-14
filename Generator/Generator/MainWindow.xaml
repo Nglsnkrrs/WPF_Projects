@@ -1,0 +1,62 @@
+﻿<Window x:Class="Generator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Generator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Панель ввода -->
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="От:" VerticalAlignment="Center"/>
+            <TextBox x:Name="FromTextBox" Width="80" Margin="5,0"/>
+
+            <TextBlock Text="До:" VerticalAlignment="Center"/>
+            <TextBox x:Name="ToTextBox" Width="80" Margin="5,0"/>
+
+            <Button Content="Старт"
+                    Width="100"
+                    Margin="10,0"
+                    Click="StartButton_Click"/>
+            <Button Content="Перезапуск" Width="100" Margin="10,0" Click="RestartButton_Click"/>
+
+
+        </StackPanel>
+
+        <!-- Кнопки управления потоками -->
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10" Grid.Row="1" >
+            <!-- Поток простых чисел -->
+            <Button Content="Пауза" Width="100" Margin="5,0" Click="PausePrimesButton_Click"/>
+            <Button Content="Возобновление" Width="100" Margin="5,0" Click="ResumePrimesButton_Click"/>
+            <Button Content="Остановка" Width="100" Margin="5,0" Click="StopPrimesButton_Click"/>
+
+            <!-- Поток Фибоначчи -->
+            <Button Content="Пауза" Width="100" Margin="70,0,5,0" Click="PauseFiboButton_Click"/>
+            <Button Content="Возобновление" Width="100" Margin="5,0" Click="ResumeFiboButton_Click"/>
+            <Button Content="Остановка" Width="100" Margin="5,0" Click="StopFiboButton_Click"/>
+        </StackPanel>
+
+        <!-- Область вывода -->
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <GroupBox Header="Простые числа" Margin="5">
+                <ListBox x:Name="PrimeListBox"/>
+            </GroupBox>
+
+            <GroupBox Header="Числа Фибоначчи" Grid.Column="1" Margin="5">
+                <ListBox x:Name="FiboListBox"/>
+            </GroupBox>
+        </Grid>
+    </Grid>
+</Window>
